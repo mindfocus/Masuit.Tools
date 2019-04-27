@@ -2,7 +2,6 @@
 using System.Data;
 using System.Reflection;
 using System.Reflection.Emit;
-
 namespace Masuit.Tools.Core.Database
 {
     internal class DataTableBuilder<T>

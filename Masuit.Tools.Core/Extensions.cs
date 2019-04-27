@@ -473,7 +473,7 @@ namespace Masuit.Tools
                     var dest = new TDestination();
                     dest.GetType().GetProperties().ForEach(p =>
                     {
-                        p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
+                        p.SetValue(dest, source.GetType().GetProperty(p.Name).GetValue(o));
                     });
                     list.Add(dest);
                 }

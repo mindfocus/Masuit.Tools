@@ -220,7 +220,7 @@ namespace Masuit.Tools.Core.Net
         /// <param name="value">值</param>
         public static void Set(this ISession session, string key, object value)
         {
-            session.SetString(key, value.ToJsonString());
+            session.Set(key,value.ToJsonString());
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace Masuit.Tools.Core.Net
         /// <returns>对象</returns>
         public static T Get<T>(this ISession session, string key)
         {
-            string value = session.GetString(key);
+            string value = session.Get<string>(key);
             if (string.IsNullOrEmpty(value))
             {
                 return default(T);

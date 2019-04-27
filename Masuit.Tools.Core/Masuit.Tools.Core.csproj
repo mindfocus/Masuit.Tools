@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Version>2.2.6.1</Version>
     <Authors>懒得勤快</Authors>
     <Company>masuit.com</Company>
@@ -30,11 +30,10 @@ github：https://github.com/ldqk/Masuit.Tools</Description>
 
   <ItemGroup>
     <PackageReference Include="HtmlSanitizer" Version="4.0.210" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.0.0-preview4.19212.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="SharpCompress" Version="0.23.0" />
-    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.5.0" />
-    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
-    <PackageReference Include="System.Management" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>

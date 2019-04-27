@@ -89,7 +89,7 @@ namespace Masuit.Tools.Strings
                     {
                         image.Save(stream, ImageFormat.Jpeg);
                         //输出图片流
-                        context.Response.Clear();
+//                        context.Response.Clear();
                         context.Response.ContentType = "image/jpeg";
                         return stream.ToArray();
                     }
