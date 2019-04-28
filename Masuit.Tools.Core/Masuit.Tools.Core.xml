@@ -488,11 +488,6 @@
             .net core的配置导入
             </summary>
         </member>
-        <member name="P:Masuit.Tools.Core.Config.CoreConfig.Configuration">
-            <summary>
-            配置对象
-            </summary>
-        </member>
         <member name="T:Masuit.Tools.Core.Database.DataTableHelper">
             <summary>
             DataTable帮助类
@@ -512,14 +507,6 @@
             </summary>
             <param name="dt">DataTable</param>
             <returns>是否有数据行</returns>
-        </member>
-        <member name="M:Masuit.Tools.Core.Database.DataTableHelper.ToList``1(System.Data.DataTable)">
-            <summary>
-            datatable转List
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="dt"></param>
-            <returns></returns>
         </member>
         <member name="M:Masuit.Tools.Core.Database.DataTableHelper.ToDataTable``1(System.Collections.Generic.IList{``0})">
             <summary>
@@ -654,20 +641,6 @@
             </summary>
             <typeparam name="T">EF上下文容器对象</typeparam>
             <returns>EF上下文容器对象</returns>
-        </member>
-        <member name="M:Masuit.Tools.Core.Net.WebExtension.GetIPAddressInfo(System.String)">
-            <summary>
-            根据IP地址获取详细地理信息
-            </summary>
-            <param name="ip"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Core.Net.WebExtension.GetPhysicsAddressInfo(System.String)">
-            <summary>
-            根据IP地址获取详细地理信息对象
-            </summary>
-            <param name="ip"></param>
-            <returns></returns>
         </member>
         <member name="M:Masuit.Tools.Core.Net.WebExtension.GetISP(System.String)">
             <summary>
@@ -1776,38 +1749,6 @@
             <typeparam name="TDestination">目标类型</typeparam>
             <returns>目标类型集合</returns>
         </member>
-        <member name="M:Masuit.Tools.Extensions.ToList``1(System.Collections.Generic.IList{System.Object})">
-            <summary>
-            映射到目标类型的集合
-            </summary>
-            <param name="source">源</param>
-            <typeparam name="TDestination">目标类型</typeparam>
-            <returns>目标类型集合</returns>
-        </member>
-        <member name="M:Masuit.Tools.Extensions.ToListAsync``1(System.Collections.Generic.IList{System.Object})">
-            <summary>
-            映射到目标类型的集合
-            </summary>
-            <param name="source">源</param>
-            <typeparam name="TDestination">目标类型</typeparam>
-            <returns>目标类型集合</returns>
-        </member>
-        <member name="M:Masuit.Tools.Extensions.ToList``1(System.Collections.Generic.IEnumerable{System.Object})">
-            <summary>
-            映射到目标类型的集合
-            </summary>
-            <param name="source">源</param>
-            <typeparam name="TDestination">目标类型</typeparam>
-            <returns>目标类型集合</returns>
-        </member>
-        <member name="M:Masuit.Tools.Extensions.ToListAsync``1(System.Collections.Generic.IEnumerable{System.Object})">
-            <summary>
-            映射到目标类型的集合
-            </summary>
-            <param name="source">源</param>
-            <typeparam name="TDestination">目标类型</typeparam>
-            <returns>目标类型集合</returns>
-        </member>
         <member name="M:Masuit.Tools.Extensions.ToJsonString(System.Object)">
             <summary>
             转换成json字符串
@@ -2205,21 +2146,7 @@
             <param name="fs">源文件流</param>
             <returns>MD5 值16进制字符串</returns>
         </member>
-        <member name="M:Masuit.Tools.Files.FileExt.GetFileMD5Async(System.IO.FileStream)">
-            <summary>
-            计算文件的 MD5 值
-            </summary>
-            <param name="fs">源文件流</param>
-            <returns>MD5 值16进制字符串</returns>
-        </member>
         <member name="M:Masuit.Tools.Files.FileExt.GetFileSha1(System.IO.Stream)">
-            <summary>
-            计算文件的 sha1 值
-            </summary>
-            <param name="fs">源文件流</param>
-            <returns>sha1 值16进制字符串</returns>
-        </member>
-        <member name="M:Masuit.Tools.Files.FileExt.GetFileSha1Async(System.IO.FileStream)">
             <summary>
             计算文件的 sha1 值
             </summary>
@@ -2231,37 +2158,8 @@
             计算文件的哈希值
             </summary>
             <param name="fs">被操作的源数据流</param>
-            <param name="algName">算法:sha1,md5</param>
+            <param name="algo">加密算法</param>
             <returns>哈希值16进制字符串</returns>
-        </member>
-        <member name="M:Masuit.Tools.Files.FileExt.HashFileAsync(System.IO.Stream,System.String)">
-            <summary>
-            计算文件的哈希值
-            </summary>
-            <param name="fs">被操作的源数据流</param>
-            <param name="algName">算法:sha1,md5</param>
-            <returns>哈希值16进制字符串</returns>
-        </member>
-        <member name="M:Masuit.Tools.Files.FileExt.HashData(System.IO.Stream,System.String)">
-            <summary>
-            计算哈希值
-            </summary>
-            <param name="stream">要计算哈希值的 Stream</param>
-            <param name="algName">算法:sha1,md5</param>
-            <returns>哈希值字节数组</returns>
-        </member>
-        <member name="M:Masuit.Tools.Files.FileExt.HashDataAsync(System.IO.Stream,System.String)">
-            <summary>
-            计算哈希值
-            </summary>
-            <param name="stream">要计算哈希值的 Stream</param>
-            <param name="algName">算法:sha1,md5</param>
-            <returns>哈希值字节数组</returns>
-        </member>
-        <member name="M:Masuit.Tools.Files.FileExt.ByteArrayToHexString(System.Byte[])">
-            <summary>
-            字节数组转换为16进制表示的字符串
-            </summary>
         </member>
         <member name="T:Masuit.Tools.Files.INIFile">
             <summary>
@@ -5280,204 +5178,6 @@
             <param name="socket">socket对象</param>
             <param name="path">文件路径</param>
             <returns>处理结果</returns>
-        </member>
-        <member name="T:Masuit.Tools.Reflection.ClassHelper">
-            <summary>  
-            类帮助器,可以动态对类,类成员进行控制(添加,删除),目前只支持属性控制。  
-            注意,属性以外的其它成员会被清空,功能还有待完善,使其不影响其它成员。  
-            </summary>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CreateInstance(System.Type)">
-            <summary>  
-            根据类的类型型创建类实例。  
-            </summary>  
-            <param name="t">将要创建的类型。</param>  
-            <returns>返回创建的类实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CreateInstance(System.String,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            根据类的名称,属性列表创建型实例。  
-            </summary>  
-            <param name="className">将要创建的类的名称。</param>  
-            <param name="lcpi">将要创建的类的属性列表。</param>  
-            <returns>返回创建的类实例</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CreateInstance(System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            根据属性列表创建类的实例,默认类名为DefaultClass,由于生成的类不是强类型,所以类名可以忽略。  
-            </summary>  
-            <param name="lcpi">将要创建的类的属性列表</param>  
-            <returns>返回创建的类的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.BuildType">
-            <summary>  
-            创建一个没有成员的类型的实例,类名为"DefaultClass"。  
-            </summary>  
-            <returns>返回创建的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.BuildType(System.String)">
-            <summary>  
-            根据类名创建一个没有成员的类型的实例。  
-            </summary>  
-            <param name="className">将要创建的类型的实例的类名。</param>  
-            <returns>返回创建的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddProperty(System.Type,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            添加属性到类型的实例,注意:该操作会将其它成员清除掉,其功能有待完善。  
-            </summary>  
-            <param name="classType">指定类型的实例。</param>  
-            <param name="lcpi">表示属性的一个列表。</param>  
-            <returns>返回处理过的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddProperty(System.Type,Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo)">
-            <summary>  
-            添加属性到类型的实例,注意:该操作会将其它成员清除掉,其功能有待完善。  
-            </summary>  
-            <param name="classType">指定类型的实例。</param>  
-            <param name="cpi">表示一个属性。</param>  
-            <returns>返回处理过的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddProperty(System.Object,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>
-            给对象实例添加新属性并返回新对象实例
-            </summary>
-            <param name="obj"></param>
-            <param name="lcpi">自定义属性对象集合</param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddProperty(System.Object,Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo)">
-            <summary>
-            给对象实例添加新属性并返回新对象实例
-            </summary>
-            <param name="obj"></param>
-            <param name="cpi">自定义属性对象</param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddProperty(System.Object,System.String,System.Object)">
-            <summary>
-            给对象实例添加新属性并返回新对象实例
-            </summary>
-            <param name="obj"></param>
-            <param name="propertyName">属性名</param>
-            <param name="propertyValue">属性值</param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.DeleteProperty(System.Type,System.String)">
-            <summary>  
-            从类型的实例中移除属性,注意:该操作会将其它成员清除掉,其功能有待完善。  
-            </summary>  
-            <param name="classType">指定类型的实例。</param>  
-            <param name="propertyName">要移除的属性。</param>  
-            <returns>返回处理过的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.DeleteProperty(System.Type,System.Collections.Generic.List{System.String})">
-            <summary>  
-            从类型的实例中移除属性,注意:该操作会将其它成员清除掉,其功能有待完善。  
-            </summary>  
-            <param name="classType">指定类型的实例。</param>  
-            <param name="propertyNames">要移除的属性列表。</param>  
-            <returns>返回处理过的类型的实例。</returns>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.DeleteProperty(System.Object,System.Collections.Generic.List{System.String})">
-            <summary>
-            删除对象的属性并返回新对象实例
-            </summary>
-            <param name="obj"></param>
-            <param name="propertyNames">属性名集合</param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.DeleteProperty(System.Object,System.String)">
-            <summary>
-            删除对象的属性并返回新对象实例
-            </summary>
-            <param name="obj"></param>
-            <param name="property">属性名</param>
-            <returns></returns>
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.MergeProperty(System.Type,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            把类型的实例t和lcpi参数里的属性进行合并。  
-            </summary>  
-            <param name="t">实例t</param>  
-            <param name="lcpi">里面包含属性列表的信息。</param>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.SeparateProperty(System.Type,System.Collections.Generic.List{System.String})">
-            <summary>  
-            从类型的实例t的属性移除属性列表lcpi,返回的新属性列表在lcpi中。  
-            </summary>  
-            <param name="t">类型的实例t。</param>  
-            <param name="ls">要移除的属性列表。</param>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddPropertyToTypeBuilder(System.Reflection.Emit.TypeBuilder,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            把lcpi参数里的属性加入到myTypeBuilder中。注意:该操作会将其它成员清除掉,其功能有待完善。  
-            </summary>  
-            <param name="myTypeBuilder">类型构造器的实例。</param>  
-            <param name="lcpi">里面包含属性列表的信息。</param>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.AddPropertyToType(System.Type,System.Collections.Generic.List{Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo})">
-            <summary>  
-            把属性加入到类型的实例。  
-            </summary>  
-            <param name="classType">类型的实例。</param>  
-            <param name="lcpi">要加入的属性列表。</param>  
-            <returns>返回处理过的类型的实例。</returns>  
-        </member>
-        <member name="T:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo">
-            <summary>  
-            自定义的属性信息类型。  
-            </summary>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.#ctor">
-            <summary>  
-            空构造。  
-            </summary>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.#ctor(System.Type,System.String)">
-            <summary>  
-            根据属性类型名称,属性名称构造实例。  
-            </summary>  
-            <param name="type">属性类型名称。</param>  
-            <param name="propertyName">属性名称。</param>  
-        </member>
-        <member name="M:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.#ctor(System.Type,System.String,System.Object)">
-            <summary>
-            根据属性类型名称,属性名称构造实例，并设置属性值。
-            </summary>
-            <param name="type"></param>
-            <param name="propertyName"></param>
-            <param name="propertyValue"></param>
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.Type">
-            <summary>  
-            获取或设置属性类型名称。  
-            </summary>  
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.PropertyName">
-            <summary>  
-            获取或设置属性名称。  
-            </summary>  
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.PropertyValue">
-            <summary>
-            属性值
-            </summary>
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.FieldName">
-            <summary>  
-            获取属性字段名称。  
-            </summary>  
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.SetPropertyMethodName">
-            <summary>  
-            获取属性在IL中的Set方法名。  
-            </summary>  
-        </member>
-        <member name="P:Masuit.Tools.Reflection.ClassHelper.CustPropertyInfo.GetPropertyMethodName">
-            <summary>  
-             获取属性在IL中的Get方法名。  
-            </summary>  
         </member>
         <member name="T:Masuit.Tools.Reflection.ReflectHelper">
             <summary>

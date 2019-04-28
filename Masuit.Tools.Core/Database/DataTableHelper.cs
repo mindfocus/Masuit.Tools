@@ -41,31 +41,31 @@ namespace Masuit.Tools.Core.Database
             return dt.Rows.Count > 0;
         }
 
-        /// <summary>
-        /// datatable转List
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="dt"></param>
-        /// <returns></returns>
-        public static List<T> ToList<T>(this DataTable dt) where T : class, new()
-        {
-            List<T> list = new List<T>();
-            using (dt)
-            {
-                if (dt == null || dt.Rows.Count == 0)
-                {
-                    return list;
-                }
-
-                DataTableBuilder<T> eblist = DataTableBuilder<T>.CreateBuilder(dt.Rows[0]);
-                foreach (DataRow info in dt.Rows)
-                {
-                    list.Add(eblist.Build(info));
-                }
-
-                return list;
-            }
-        }
+//        /// <summary>
+//        /// datatable转List
+//        /// </summary>
+//        /// <typeparam name="T"></typeparam>
+//        /// <param name="dt"></param>
+//        /// <returns></returns>
+//        public static List<T> ToList<T>(this DataTable dt) where T : class, new()
+//        {
+//            List<T> list = new List<T>();
+//            using (dt)
+//            {
+//                if (dt == null || dt.Rows.Count == 0)
+//                {
+//                    return list;
+//                }
+//
+//                DataTableBuilder<T> eblist = DataTableBuilder<T>.CreateBuilder(dt.Rows[0]);
+//                foreach (DataRow info in dt.Rows)
+//                {
+//                    list.Add(eblist.Build(info));
+//                }
+//
+//                return list;
+//            }
+//        }
 
         /// <summary>
         /// 将泛型集合类转换成DataTable

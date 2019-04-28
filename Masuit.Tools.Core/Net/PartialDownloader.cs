@@ -82,7 +82,7 @@ namespace Masuit.Tools.Net
                 _req.ServicePoint.ConnectionLimit += 1;
                 _req.ServicePoint.Expect100Continue = true;
                 _req.ProtocolVersion = HttpVersion.Version10;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.SystemDefault;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
                 ServicePointManager.Expect100Continue = true;
                 if (_rangeAllowed)
                     _req.AddRange(_from, _to);

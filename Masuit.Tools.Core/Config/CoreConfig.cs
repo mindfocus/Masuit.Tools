@@ -12,6 +12,6 @@ namespace Masuit.Tools.Core.Config
         /// <summary>
         /// 配置对象
         /// </summary>
-        internal static IConfiguration Configuration => new ConfigurationBuilder().SetBasePath(AppContext.BaseDirectory).AddJsonFile("appsettings.json", true, true).AddInMemoryCollection().AddEnvironmentVariables().AddApplicationInsightsSettings().Build();
+//        internal static IConfiguration Configuration => new ConfigurationBuilder() .SetBasePath(AppContext.BaseDirectory).AddJsonFile("appsettings.json", true, true).AddInMemoryCollection().AddEnvironmentVariables().AddApplicationInsightsSettings().Build();
     }
 }

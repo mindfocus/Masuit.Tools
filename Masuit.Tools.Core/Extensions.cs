@@ -394,93 +394,93 @@ namespace Masuit.Tools
             });
         }
 
-        /// <summary>
-        /// 映射到目标类型的集合
-        /// </summary>
-        /// <param name="source">源</param>
-        /// <typeparam name="TDestination">目标类型</typeparam>
-        /// <returns>目标类型集合</returns>
-        public static IEnumerable<TDestination> ToList<TDestination>(this IList<dynamic> source) where TDestination : new()
-        {
-            foreach (var o in source)
-            {
-                var dest = new TDestination();
-                dest.GetType().GetProperties().ForEach(p =>
-                {
-                    p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
-                });
-                yield return dest;
-            }
-        }
+//        /// <summary>
+//        /// 映射到目标类型的集合
+//        /// </summary>
+//        /// <param name="source">源</param>
+//        /// <typeparam name="TDestination">目标类型</typeparam>
+//        /// <returns>目标类型集合</returns>
+//        public static IEnumerable<TDestination> ToList<TDestination>(this IList<dynamic> source) where TDestination : new()
+//        {
+//            foreach (var o in source)
+//            {
+//                var dest = new TDestination();
+//                dest.GetType().GetProperties().ForEach(p =>
+//                {
+//                    p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
+//                });
+//                yield return dest;
+//            }
+//        }
 
-        /// <summary>
-        /// 映射到目标类型的集合
-        /// </summary>
-        /// <param name="source">源</param>
-        /// <typeparam name="TDestination">目标类型</typeparam>
-        /// <returns>目标类型集合</returns>
-        public static async Task<IEnumerable<TDestination>> ToListAsync<TDestination>(this IList<dynamic> source) where TDestination : new()
-        {
-            return await Task.Run(() =>
-            {
-                IList<TDestination> list = new List<TDestination>();
-                foreach (var o in source)
-                {
-                    var dest = new TDestination();
-                    dest.GetType().GetProperties().ForEach(p =>
-                    {
-                        p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
-                    });
-                    list.Add(dest);
-                }
+//        /// <summary>
+//        /// 映射到目标类型的集合
+//        /// </summary>
+//        /// <param name="source">源</param>
+//        /// <typeparam name="TDestination">目标类型</typeparam>
+//        /// <returns>目标类型集合</returns>
+//        public static async Task<IEnumerable<TDestination>> ToListAsync<TDestination>(this IList<dynamic> source) where TDestination : new()
+//        {
+//            return await Task.Run(() =>
+//            {
+//                IList<TDestination> list = new List<TDestination>();
+//                foreach (var o in source)
+//                {
+//                    var dest = new TDestination();
+//                    dest.GetType().GetProperties().ForEach(p =>
+//                    {
+//                        p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
+//                    });
+//                    list.Add(dest);
+//                }
+//
+//                return list;
+//            });
+//        }
 
-                return list;
-            });
-        }
+//        /// <summary>
+//        /// 映射到目标类型的集合
+//        /// </summary>
+//        /// <param name="source">源</param>
+//        /// <typeparam name="TDestination">目标类型</typeparam>
+//        /// <returns>目标类型集合</returns>
+//        public static IEnumerable<TDestination> ToList<TDestination>(this IEnumerable<dynamic> source) where TDestination : new()
+//        {
+//            foreach (var o in source)
+//            {
+//                var dest = new TDestination();
+//                dest.GetType().GetProperties().ForEach(p =>
+//                {
+//                    p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
+//                });
+//                yield return dest;
+//            }
+//        }
 
-        /// <summary>
-        /// 映射到目标类型的集合
-        /// </summary>
-        /// <param name="source">源</param>
-        /// <typeparam name="TDestination">目标类型</typeparam>
-        /// <returns>目标类型集合</returns>
-        public static IEnumerable<TDestination> ToList<TDestination>(this IEnumerable<dynamic> source) where TDestination : new()
-        {
-            foreach (var o in source)
-            {
-                var dest = new TDestination();
-                dest.GetType().GetProperties().ForEach(p =>
-                {
-                    p.SetValue(dest, source.GetType().GetProperty(p.Name)?.GetValue(o));
-                });
-                yield return dest;
-            }
-        }
-
-        /// <summary>
-        /// 映射到目标类型的集合
-        /// </summary>
-        /// <param name="source">源</param>
-        /// <typeparam name="TDestination">目标类型</typeparam>
-        /// <returns>目标类型集合</returns>
-        public static async Task<IEnumerable<TDestination>> ToListAsync<TDestination>(this IEnumerable<dynamic> source) where TDestination : new()
-        {
-            return await Task.Run(() =>
-            {
-                IList<TDestination> list = new List<TDestination>();
-                foreach (var o in source)
-                {
-                    var dest = new TDestination();
-                    dest.GetType().GetProperties().ForEach(p =>
-                    {
-                        p.SetValue(dest, source.GetType().GetProperty(p.Name).GetValue(o));
-                    });
-                    list.Add(dest);
-                }
-
-                return list;
-            });
-        }
+//        /// <summary>
+//        /// 映射到目标类型的集合
+//        /// </summary>
+//        /// <param name="source">源</param>
+//        /// <typeparam name="TDestination">目标类型</typeparam>
+//        /// <returns>目标类型集合</returns>
+//        public static async Task<IEnumerable<TDestination>> ToListAsync<TDestination>(this IEnumerable<dynamic> source) where TDestination : new()
+//        {
+//            return await Task.Run(() =>
+//            {
+//                IList<TDestination> list = new List<TDestination>();
+//                foreach (var o in source)
+//                {
+//                    var dest = new TDestination();
+//                    dest.GetType().GetProperties().ForEach(p =>
+//                    {
+//                        p.SetValue(dest, source.GetType().GetProperty(p.Name).GetValue(o));
+//                    });
+//                    list.Add(dest);
+//                }
+//
+//                return list;
+//            });
+//        }
 
         #endregion
 
